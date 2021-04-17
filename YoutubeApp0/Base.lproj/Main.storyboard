@@ -61,7 +61,7 @@
         <!--Profile View Controller-->
         <scene sceneID="RIt-nY-PVB">
             <objects>
-                <viewController id="E1j-rw-dJQ" customClass="ProfileViewController" customModule="YoutubeApp0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E1j-rw-dJQ" customClass="ProfileViewController" customModule="YoutubeApp0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHM-Hz-9J3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,17 +92,31 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maA-8g-qzO">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maA-8g-qzO">
                                 <rect key="frame" x="75" y="103" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z90-1k-9mA" appends="YES" id="LXP-WG-d2R"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W8w-cs-NFo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="3h3-sz-tcd"/>
+                    <connections>
+                        <outlet property="button" destination="qeO-ir-7EZ" id="vAK-Za-12U"/>
+                        <outlet property="imageView" destination="maA-8g-qzO" id="1gK-F3-fRI"/>
+                        <outlet property="textView" destination="8LA-h4-MhC" id="b4i-PL-q40"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jF8-UX-jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z90-1k-9mA">
+                    <connections>
+                        <action selector="tap:" destination="E1j-rw-dJQ" id="Ixb-wT-Eea"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1633.8461538461538" y="83.886255924170612"/>
         </scene>

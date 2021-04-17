@@ -29,9 +29,11 @@ class ViewController: UIViewController {
     
     @IBAction func createNewUser(_ sender: Any) {
         
-        
+        createUser()
         
     }
+    
+    
     
     func createUser() {
         //1
@@ -43,6 +45,17 @@ class ViewController: UIViewController {
             print(user.debugDescription)
             
             
+            UserDefaults.standard.set(self.textfield.text, forKey: "userName")
+            
+            
+            //画面遷移
+            let profileVC = self.storyboard?.instantiateViewController(identifier: "profileVC") as! ProfileViewController
+            
+            
+            profileVC.userName = self.textfield.text!
+            
+            
+            self.navigationController?.pushViewController(profileVC, animated: true)
         }
         //2
         
