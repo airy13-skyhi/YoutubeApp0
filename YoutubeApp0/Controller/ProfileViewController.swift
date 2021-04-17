@@ -35,13 +35,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func tap(_ sender: Any) {
         
-        
+        showAlert()
     }
     
     //タッチされた時に呼ばれる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        
+        textView.resignFirstResponder()
     }
     
     
@@ -106,6 +106,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[.editedImage] as? UIImage {
@@ -117,8 +123,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    @IBAction func done(_ sender: Any) {
+        
+        
+        
+    }
     
-
+    
+    
+    
     /*
     // MARK: - Navigation
 
