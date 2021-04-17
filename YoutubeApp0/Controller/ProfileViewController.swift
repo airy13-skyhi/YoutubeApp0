@@ -10,7 +10,9 @@ import Photos
 import FirebaseFirestore
 
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, DoneSendProfileDelegate {
+    
+    
     
     var userName = String()
     
@@ -125,11 +127,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func done(_ sender: Any) {
         
+        let sendDB = SendDB()
         
+        sendDB.doneSendProfileDelegate = self
+        
+        sendDB.sendProfile(userName: userName, imageData: imageView.image!.jpegData(compressionQuality: 0.5)!, profileTextView: textView.text!)
         
     }
     
-    
+    func doneSendProfileDelegate(sendCheck: Int) {
+        
+        if sendCheck == 1 {
+            
+            
+            //画面遷移
+            let searchVC = self.storyboard?.instantiateViewController(identifier: "searchVC") as! SearchViewController
+            self.navigationController?.pushViewController(searchVC, animated: true)
+        }
+    }
     
     
     /*

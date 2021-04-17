@@ -91,6 +91,9 @@
                                 <state key="normal" title="決定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="E1j-rw-dJQ" eventType="touchUpInside" id="RZu-be-y7q"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maA-8g-qzO">
                                 <rect key="frame" x="75" y="103" width="240" height="240"/>
@@ -109,6 +112,7 @@
                         <outlet property="button" destination="qeO-ir-7EZ" id="vAK-Za-12U"/>
                         <outlet property="imageView" destination="maA-8g-qzO" id="1gK-F3-fRI"/>
                         <outlet property="textView" destination="8LA-h4-MhC" id="b4i-PL-q40"/>
+                        <segue destination="bzc-2T-vk9" kind="show" id="YhH-jh-gzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jF8-UX-jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,6 +123,22 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1633.8461538461538" y="83.886255924170612"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Qir-Co-dnG">
+            <objects>
+                <viewController storyboardIdentifier="searchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bzc-2T-vk9" customClass="SearchViewController" customModule="YoutubeApp0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccB-Y2-fP9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kH3-hp-BjL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CgT-ca-yCI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7PH-cG-fFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2KA-nF-bbl">

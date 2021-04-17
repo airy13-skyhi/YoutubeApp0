@@ -10,11 +10,18 @@ import FirebaseFirestore
 import FirebaseAuth
 import FirebaseStorage
 
+protocol DoneSendProfileDelegate {
+    
+    func doneSendProfileDelegate(sendCheck:Int)
+}
+
+
 class  SendDB {
     
     var userName = String()
     var imageData = Data()
     var db = Firestore.firestore()
+    var doneSendProfileDelegate:DoneSendProfileDelegate?
     
     
     init() {
@@ -45,7 +52,8 @@ class  SendDB {
                     ["userName":userName as Any, "imageURLString":url?.absoluteString as Any, "profileTextView":profileTextView as Any]
                 
                 )
-                
+             
+                self.doneSendProfileDelegate?.doneSendProfileDelegate(sendCheck: 1)
             }
             
         }
