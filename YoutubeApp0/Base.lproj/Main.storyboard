@@ -183,12 +183,19 @@
                                 <rect key="frame" x="324" y="32" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="search"/>
+                                <connections>
+                                    <action selector="search:" destination="bzc-2T-vk9" eventType="touchUpInside" id="nEf-kf-VY3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kH3-hp-BjL"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="CgT-ca-yCI"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="wiS-vg-fKm" id="ksK-YZ-BwO"/>
+                        <outlet property="tableView" destination="rYL-wl-7S9" id="gNB-vg-byC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PH-cG-fFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
