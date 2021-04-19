@@ -195,11 +195,28 @@
                     <connections>
                         <outlet property="searchTextField" destination="wiS-vg-fKm" id="ksK-YZ-BwO"/>
                         <outlet property="tableView" destination="rYL-wl-7S9" id="gNB-vg-byC"/>
+                        <segue destination="BDp-9V-vHi" kind="show" id="HsJ-X0-S2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PH-cG-fFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2373.8461538461538" y="83.886255924170612"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="IYq-y8-cjA">
+            <objects>
+                <viewController storyboardIdentifier="listVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BDp-9V-vHi" customClass="ListViewController" customModule="YoutubeApp0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahZ-Ro-QKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xq5-k9-HEF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QzB-24-bY7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lag-kL-363" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2KA-nF-bbl">
