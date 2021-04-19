@@ -20,6 +20,8 @@
 		057DC9EE262C35D2000F829A /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057DC9EC262C35D2000F829A /* VideoCell.xib */; };
 		057DC9F2262C4181000F829A /* SearchAndLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DC9F1262C4181000F829A /* SearchAndLoadModel.swift */; };
 		057DC9F5262D881E000F829A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DC9F4262D881E000F829A /* ListViewController.swift */; };
+		057DC9F9262D8B81000F829A /* UserNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DC9F7262D8B81000F829A /* UserNameCell.swift */; };
+		057DC9FA262D8B81000F829A /* UserNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057DC9F8262D8B81000F829A /* UserNameCell.xib */; };
 		05B8F313262AEC2900624AF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05B8F312262AEC2900624AF0 /* GoogleService-Info.plist */; };
 		05B8F317262AED7500624AF0 /* SendDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8F316262AED7500624AF0 /* SendDB.swift */; };
 		2BBCF71720C116D2F1FEDD03 /* Pods_YoutubeApp0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01B861DD1A1380497085821 /* Pods_YoutubeApp0.framework */; };
@@ -41,6 +43,8 @@
 		057DC9EC262C35D2000F829A /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		057DC9F1262C4181000F829A /* SearchAndLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndLoadModel.swift; sourceTree = "<group>"; };
 		057DC9F4262D881E000F829A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		057DC9F7262D8B81000F829A /* UserNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCell.swift; sourceTree = "<group>"; };
+		057DC9F8262D8B81000F829A /* UserNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNameCell.xib; sourceTree = "<group>"; };
 		05B8F312262AEC2900624AF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05B8F316262AED7500624AF0 /* SendDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDB.swift; sourceTree = "<group>"; };
 		3C290967FA1E7599B6309602 /* Pods-YoutubeApp0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeApp0.debug.xcconfig"; path = "Target Support Files/Pods-YoutubeApp0/Pods-YoutubeApp0.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				057DC9EB262C35D2000F829A /* VideoCell.swift */,
 				057DC9EC262C35D2000F829A /* VideoCell.xib */,
+				057DC9F7262D8B81000F829A /* UserNameCell.swift */,
+				057DC9F8262D8B81000F829A /* UserNameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				057DC9EE262C35D2000F829A /* VideoCell.xib in Resources */,
+				057DC9FA262D8B81000F829A /* UserNameCell.xib in Resources */,
 				05B8F313262AEC2900624AF0 /* GoogleService-Info.plist in Resources */,
 				05276E662629262E00C05398 /* LaunchScreen.storyboard in Resources */,
 				05276E632629262E00C05398 /* Assets.xcassets in Resources */,
@@ -263,6 +270,7 @@
 				057DC9E5262B018A000F829A /* SearchViewController.swift in Sources */,
 				05276E5E2629262300C05398 /* ViewController.swift in Sources */,
 				057DC9F2262C4181000F829A /* SearchAndLoadModel.swift in Sources */,
+				057DC9F9262D8B81000F829A /* UserNameCell.swift in Sources */,
 				05276E5A2629262300C05398 /* AppDelegate.swift in Sources */,
 				05B8F317262AED7500624AF0 /* SendDB.swift in Sources */,
 				05276E8D262A5B5800C05398 /* ProfileViewController.swift in Sources */,

@@ -139,6 +139,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
+    @IBAction func confirmList(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let listVC = storyboard?.instantiateViewController(withIdentifier: "listVC") as! ListViewController
+        
+        if (sender as AnyObject).tag == 1 {
+          
+            //myList
+            listVC.tag = 1
+            listVC.userName = userName
+            
+        }else {
+            
+            //ourList
+            listVC.tag = 2
+            
+            
+        }
+        self.navigationController?.pushViewController(listVC, animated: true)
+        
+        
+    }
+    
+    
+    
     /*
      // MARK: - Navigation
      
