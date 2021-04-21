@@ -20,12 +20,29 @@ protocol DonecatchDataProtocol {
 }
 
 
+protocol DoneLoadDataProtocol {
+    
+    func doneloadData(array:[DataSets])
+    
+}
+
+protocol DoneLoadUserNameProtocol {
+    
+    func doneLoadUserName(array:[String])
+}
+
+
 class SearchAndLoadModel {
     
     var urlString = String()
     var resultPerpage = Int()
     var dataSetsArray:[DataSets] = []
     var doneCatchDataProtocol:DonecatchDataProtocol?
+    var doneLoadDataProtocol:DoneLoadDataProtocol?
+    
+    var db = Firestore.firestore()
+    var userNameArray = [String]()
+    var doneLoadUserNameProtocol:DoneLoadUserNameProtocol?
     
     init(urlString:String) {
         
@@ -34,6 +51,11 @@ class SearchAndLoadModel {
     }
     
     
+    init() {
+        
+    }
+    
+    //JSON解析
     func search() {
         
         let encodeUrlString = self.urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -101,10 +123,73 @@ class SearchAndLoadModel {
             case .failure(_): break
                 
             }
-            
         }
     }
     
+    //myListの受信
+    func loadMyListData(userName:String) {
+        
+        db.collection("contents").document(userName).collection("collection").order(by: "postDate").addSnapshotListener { (snapShot, error) in
+            
+            self.dataSetsArray = []
+            
+            if error != nil {
+                
+                print(error.debugDescription)
+                return
+            }
+            
+            
+            if let snapShotDoc = snapShot?.documents {
+                
+                for doc in snapShotDoc {
+                    
+                    let data = doc.data()
+                    print(data.debugDescription)
+                    if let videoID = data["videoID"] as? String, let urlString = data["urlString"] as? String, let publishTime = data["publishTime"] as? String, let title = data["title"] as? String, let description = data["description"] as? String, let channelTitle = data["channelTitle"] as? String {
+                        
+                        let dataSets = DataSets(videoID: videoID, title: title, description: description, url: urlString, channelTitle: channelTitle, publishTime: publishTime)
+                        
+                        self.dataSetsArray.append(dataSets)
+                        
+                    }
+                    
+                }
+                
+                self.doneLoadDataProtocol?.doneloadData(array: self.dataSetsArray)
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    //ユーザー名を取得する
+    func loadOtherListData() {
+        
+        
+        db.collection("Users").addSnapshotListener { (snapShot, error) in
+            
+            if let snapShotDoc = snapShot?.documents {
+                
+                for doc in snapShotDoc {
+                    
+                    let data = doc.data()
+                    if let userName = data["userName"] as? String {
+                        
+                        self.userNameArray.append(userName)
+                    }
+                }
+                
+                //controller側にprotocolを用いて値を渡す
+                self.doneLoadUserNameProtocol?.doneLoadUserName(array: self.userNameArray)
+                
+                
+            }
+        }
+        
+    }
     
     
     

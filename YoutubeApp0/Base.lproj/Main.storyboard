@@ -237,10 +237,28 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="QzB-24-bY7"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZzB-n9-aWL" id="BUH-fN-vhJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lag-kL-363" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3101.5384615384614" y="83.886255924170612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9fO-X7-V6Q">
+            <objects>
+                <viewController id="foW-1q-F6O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ai-j0-QM0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UC7-2t-fQ8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlz-QT-sR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3829" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2KA-nF-bbl">
