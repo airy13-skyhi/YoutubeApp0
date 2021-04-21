@@ -31,6 +31,11 @@ protocol DoneLoadUserNameProtocol {
     func doneLoadUserName(array:[String])
 }
 
+protocol DoneLoadProfileProtocol {
+    
+    func doneLoadProfileProtocol(check:Int, userName:String, profileTextView:String, imageURLString:String)
+}
+
 
 class SearchAndLoadModel {
     
@@ -39,7 +44,7 @@ class SearchAndLoadModel {
     var dataSetsArray:[DataSets] = []
     var doneCatchDataProtocol:DonecatchDataProtocol?
     var doneLoadDataProtocol:DoneLoadDataProtocol?
-    
+    var doneLoadProfileProtocol:DoneLoadProfileProtocol?
     var db = Firestore.firestore()
     var userNameArray = [String]()
     var doneLoadUserNameProtocol:DoneLoadUserNameProtocol?
@@ -187,6 +192,33 @@ class SearchAndLoadModel {
                 
                 
             }
+        }
+        
+    }
+    
+    
+    func loadProfile(userName:String) {
+        
+        db.collection("profile").document(userName).addSnapshotListener { (snapShot, error) in
+            
+            
+            if error != nil {
+                
+                print(error.debugDescription)
+                return
+            }
+            
+            
+            let data = snapShot?.data()
+            
+            if let userName = data!["userName"] as? String, let profileTextView = data!["profileTextView"] as? String, let imageURLString = data!["imageURLString"] as? String {
+                
+                
+                
+                self.doneLoadProfileProtocol?.doneLoadProfileProtocol(check: 1, userName: userName, profileTextView: profileTextView, imageURLString: imageURLString)
+                
+            }
+            
         }
         
     }

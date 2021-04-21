@@ -155,7 +155,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }else {
             
             //DetailVCへ画面遷移
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as! DetailViewController
             
+            detailVC.userName = userNameArray[indexPath.row]
+            self.navigationController?.pushViewController(detailVC, animated: true)
             
         }
         
