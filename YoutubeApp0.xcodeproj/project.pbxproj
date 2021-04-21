@@ -26,6 +26,7 @@
 		057DCA00262FD80A000F829A /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DC9FF262FD80A000F829A /* TrendViewController.swift */; };
 		05B8F313262AEC2900624AF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05B8F312262AEC2900624AF0 /* GoogleService-Info.plist */; };
 		05B8F317262AED7500624AF0 /* SendDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8F316262AED7500624AF0 /* SendDB.swift */; };
+		05FE8E1D26302C72007065EB /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE8E1C26302C72007065EB /* TrendModel.swift */; };
 		2BBCF71720C116D2F1FEDD03 /* Pods_YoutubeApp0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01B861DD1A1380497085821 /* Pods_YoutubeApp0.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		057DC9FF262FD80A000F829A /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		05B8F312262AEC2900624AF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05B8F316262AED7500624AF0 /* SendDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDB.swift; sourceTree = "<group>"; };
+		05FE8E1C26302C72007065EB /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
 		3C290967FA1E7599B6309602 /* Pods-YoutubeApp0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeApp0.debug.xcconfig"; path = "Target Support Files/Pods-YoutubeApp0/Pods-YoutubeApp0.debug.xcconfig"; sourceTree = "<group>"; };
 		63CFE945E5E13E8A43C17459 /* Pods-YoutubeApp0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeApp0.release.xcconfig"; path = "Target Support Files/Pods-YoutubeApp0/Pods-YoutubeApp0.release.xcconfig"; sourceTree = "<group>"; };
 		A01B861DD1A1380497085821 /* Pods_YoutubeApp0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeApp0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				05B8F316262AED7500624AF0 /* SendDB.swift */,
 				057DC9E7262C2FF0000F829A /* DataSets.swift */,
 				057DC9F1262C4181000F829A /* SearchAndLoadModel.swift */,
+				05FE8E1C26302C72007065EB /* TrendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				057DC9F5262D881E000F829A /* ListViewController.swift in Sources */,
 				05276E5C2629262300C05398 /* SceneDelegate.swift in Sources */,
 				057DCA00262FD80A000F829A /* TrendViewController.swift in Sources */,
+				05FE8E1D26302C72007065EB /* TrendModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
